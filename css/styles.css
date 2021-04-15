@@ -11,8 +11,9 @@ body {
   height: 100vh;
   background-color: brown;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .cardContainer {
   height: calc(var(--cardSize) * 1.1);
@@ -22,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: calc(var(--cardSize) * 0.4);
 }
 .userImgCover {
   width: calc(var(--cardSize) * 0.4 + 6px);
@@ -37,7 +39,6 @@ body {
   height: calc(var(--cardSize) * 0.4);
   border-radius: 50%;
   border: brown solid 4px;
-  /* background-color: burlywood; */
   overflow: hidden;
 }
 .userImg > img {
@@ -55,6 +56,7 @@ body {
   font-style: italic;
   padding-top: 5px;
   font-size: 1em;
+  text-align: center;
 }
 .userLocation {
   color: var(--secondaryColor);
@@ -63,7 +65,6 @@ body {
 }
 .userLocation img {
   height: 15px;
-  /* width: auto; */
 }
 .line {
   height: 20px;
@@ -74,7 +75,6 @@ hr {
   background-color: var(--secondaryColor);
   margin: 10px 10% 0 10%;
 }
-
 .userFollowers {
   height: 100px;
   width: 100%;
@@ -94,7 +94,6 @@ hr {
   padding: 3px;
 }
 .social {
-  /* height: calc(var(--cardSize) * 0.1); */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -102,14 +101,8 @@ hr {
   padding: 5px;
 }
 .social img {
-  /* color: var(--mainColor); */
   width: calc((var(--cardSize) * 0.4) / 3.5);
   height: calc((var(--cardSize) * 0.4) / 3.5);
-
-  /* border-radius: 50%; */
-  /* border: brown solid 4px; */
-  /* background-color: burlywood; */
-  /* overflow: hidden; */
 }
 .social img:not(:first-child) {
   border-left: var(--secondaryColor) 2px solid;
