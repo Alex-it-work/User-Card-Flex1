@@ -4,26 +4,30 @@ body {
   --cardSize: 400px;
   --mainColor: grey;
   --secondaryColor: rgb(182, 182, 182);
-  font-family: sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 20px;
+  letter-spacing: 2px;
+  background-color: brown;
 }
 .flexContainer {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: brown;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
 }
 .cardContainer {
-  height: calc(var(--cardSize) * 1.1);
-  width: var(--cardSize);
+  min-height: calc(var(--cardSize) * 1.1);
+  width: 100%;
+  max-width: calc(var(--cardSize) + 50px);
+  min-width: calc(var(--cardSize) - 100px);
   background-color: whitesmoke;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: calc(var(--cardSize) * 0.4);
+  margin: calc(var(--cardSize) * 0.4) 20px;
 }
 .userImgCover {
   width: calc(var(--cardSize) * 0.4 + 6px);
@@ -76,7 +80,7 @@ hr {
   margin: 10px 10% 0 10%;
 }
 .userFollowers {
-  height: 100px;
+  height: 100%;
   width: 100%;
   color: var(--mainColor);
   display: flex;
